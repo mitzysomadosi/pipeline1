@@ -10,3 +10,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Evaluación gratuita(802d13f5-2c6f-4a1c-84bd-2d154e1275d2)'
+    subscriptionId: '802d13f5-2c6f-4a1c-84bd-2d154e1275d2'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'pipeline1'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'storage.json'
+    deploymentMode: 'Incremental'
