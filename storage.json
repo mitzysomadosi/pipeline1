@@ -9,11 +9,13 @@
         }
     }, 
     "functions": [],
-    "variables": {},
+    "variables": {
+        "storageName": "storageaccountw72"
+    },
     "resources": 
     [
         {
-            "name": "storageac71520",
+            "name": "[variables('storageName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "location": "southcentralus",
