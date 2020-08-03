@@ -5,17 +5,16 @@
         "storageName": {
             "type": "string",
             "minLength":3,
-            "maxLength":24
+            "maxLength":24,
+            "defaultValue": "storagepipelinem23"
         }
     }, 
     "functions": [],
-    "variables": {
-        "storageName": "storageaccountw72"
-    },
+    "variables": {},
     "resources": 
     [
         {
-            "name": "[variables('storageName')]",
+            "name": "[parameters('storageName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
             "location": "southcentralus",
